@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica", sans-serif;
+  line-height: 1.6;
+  min-height: 300vh;
+  margin: 0;
+  font-size: clamp(1rem, 1rem + 1vw, 1.5rem);
+}
+
+h1 {
+  line-height: 1.25;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: clamp(1rem, 2vw, 5rem);
+}
+
+.progress {
+  height: 1rem;
+  background: blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transform-origin: 0 50%;
+  animation: scaleProgress auto linear;
+  animation-timeline: scroll(root);
+}
+
+@keyframes scaleProgress {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
